@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практикум Стратегия — Метод ZMS</title>
+    <link rel="icon" href="assets/icons/crosshair.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=Unbounded:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103707469', 'ym');
+    ym(103707469, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/103707469" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="logo">
+                    <img src="assets/icons/crosshair.svg" alt="" class="logo-icon-img" width="28" height="28">
+                    <span class="logo-text">MetodZMS</span>
+                </a>
+                <div class="nav-links">
+                </div>
+            </div>
+            <div class="nav-right">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-left">
+                <p class="hero-supra">Практикум для основателей <span class="supra-gray">микрокомпаний</span></p>
+                <h1 class="hero-title">Основание<br>на <span class="highlight-lime">масштаб</span></h1>
+                <p class="hero-subtitle">11 шагов стратегического маркетинга — фундамент для роста компании до 120 млн ₽</p>
+                <div class="hero-descriptor-inline">
+                    <p class="hero-descriptor-title">За 2 часа разберётесь:</p>
+                    <p class="hero-descriptor-line">
+                        <svg class="descriptor-icon icon-coral" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                        <span>Почему реклама сливает деньги, даже если настроена «правильно»</span>
+                        <svg class="descriptor-icon icon-blue" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+                        <span>Почему обучения, разборы и книги не помогают увеличить продажи</span>
+                        <svg class="descriptor-icon icon-lime" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+                        <span>Как перестать сомневаться в каждом решении и получить ясность</span>
+                    </p>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#pricing" class="btn-primary">
+                        <img src="assets/icons/play.svg" alt="" class="btn-icon btn-icon-white" width="20" height="20">
+                        <span>Получить запись</span>
+                    </a>
+                    <a href="#" class="btn-secondary">
+                        <img src="assets/icons/eye.svg" alt="" class="btn-icon" width="20" height="20">
+                        <span>Смотреть превью</span>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-photo-block">
+                    <img src="assets/images/ad_z.jpg" alt="Алексей Добрусин" class="hero-photo">
+                    <div class="hero-photo-gradient"></div>
+                    <div class="hero-photo-overlay">
+                        <div class="hero-photo-header">
+                            <div class="hero-pulse-dot">
+                                <div class="hero-pulse-wave"></div>
+                                <div class="hero-pulse-wave hero-pulse-wave-delayed"></div>
+                            </div>
+                            <span class="hero-photo-name">Алексей Добрусин</span>
+                        </div>
+                        <p class="hero-photo-desc">Маркетолог-стратег с 16-летним опытом. Кандидат экономических наук. Пропагандист инженерного подхода в маркетинге.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Author Quote -->
+    <section class="author-quote-section">
+        <div class="author-quote-container">
+            <div class="author-quote-left">
+                <div class="author-avatar">
+                    <img src="assets/images/AD_1.jpg" alt="Алексей Добрусин">
+                </div>
+                <div class="author-info">
+                    <p class="author-name">Алексей Добрусин</p>
+                    <p class="author-role">Автор практикума</p>
+                </div>
+            </div>
+            <div class="author-quote-right">
+                <div class="quote-mark">
+                    <img src="assets/icons/quote-tabler.svg?v=4" alt="" width="115" height="72">
+                </div>
+                <div class="quote-text-content">
+                    <h2 class="author-quote-heading">За 16 лет я исследовал маркетинг 300+ микрокомпаний с проблемами в продажах и рекламе. Причина одна — нарушены принципы стратегического маркетинга.</h2>
+                    <p class="author-quote-text">Чтобы построить бизнес на 120 млн ₽, нужен фундамент, который эту конструкцию выдержит. Фундамент заливается по правилам: сначала арматура, потом опалубка, потом бетон. Нельзя сначала залить бетон, а потом копать котлован.</p>
+                    <p class="author-quote-final">В маркетинге то же самое. 11 инструментов стратегического раздела — это последовательность. Пропустишь шаг или сделаешь не в том порядке — и реклама, продажи, масштабирование не заработают. Фундамент не выдержит.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Desires (For whom) -->
+    <section class="steps-section">
+        <div class="steps-container">
+            <div class="steps-header">
+                <div class="steps-header-left">
+                    <h2 class="steps-title">Для собственников бизнеса с оборотом до <span class="highlight-lime nowrap">120 млн ₽</span></h2>
+                </div>
+            </div>
+            <div class="steps-grid steps-grid-5">
+                <!-- Card 1 -->
+                <div class="step-card">
+                    <div class="step-card-corner step-card-corner-tl"></div>
+                    <div class="step-card-corner step-card-corner-tr"></div>
+                    <div class="step-card-corner step-card-corner-bl"></div>
+                    <div class="step-card-corner step-card-corner-br"></div>
+                    <div class="step-card-header">
+                        <img src="assets/icons/trending-up.svg" alt="" class="step-card-icon">
+                    </div>
+                    <p class="step-card-text">Хотите стабильный поток заявок и рост выручки</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="step-card">
+                    <div class="step-card-corner step-card-corner-tl"></div>
+                    <div class="step-card-corner step-card-corner-tr"></div>
+                    <div class="step-card-corner step-card-corner-bl"></div>
+                    <div class="step-card-corner step-card-corner-br"></div>
+                    <div class="step-card-header">
+                        <img src="assets/icons/piggy-bank.svg" alt="" class="step-card-icon">
+                    </div>
+                    <p class="step-card-text">Хотите перестать впустую тратить деньги на маркетинг</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="step-card">
+                    <div class="step-card-corner step-card-corner-tl"></div>
+                    <div class="step-card-corner step-card-corner-tr"></div>
+                    <div class="step-card-corner step-card-corner-bl"></div>
+                    <div class="step-card-corner step-card-corner-br"></div>
+                    <div class="step-card-header">
+                        <img src="assets/icons/lightbulb.svg" alt="" class="step-card-icon">
+                    </div>
+                    <p class="step-card-text">Хотите понять, что реально принесёт деньги в вашем бизнесе</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="step-card">
+                    <div class="step-card-corner step-card-corner-tl"></div>
+                    <div class="step-card-corner step-card-corner-tr"></div>
+                    <div class="step-card-corner step-card-corner-bl"></div>
+                    <div class="step-card-corner step-card-corner-br"></div>
+                    <div class="step-card-header">
+                        <img src="assets/icons/rocket.svg" alt="" class="step-card-icon">
+                    </div>
+                    <p class="step-card-text">Хотите стабильного роста без вашего ежедневного участия</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="step-card">
+                    <div class="step-card-corner step-card-corner-tl"></div>
+                    <div class="step-card-corner step-card-corner-tr"></div>
+                    <div class="step-card-corner step-card-corner-bl"></div>
+                    <div class="step-card-corner step-card-corner-br"></div>
+                    <div class="step-card-header">
+                        <img src="assets/icons/target.svg" alt="" class="step-card-icon">
+                    </div>
+                    <p class="step-card-text">Хотите понятный путь к 120 млн ₽ годовой выручки</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Pains (Block 4) — Боли -->
+    <section class="pains-section">
+        <div class="pains-container">
+            <h2 class="pains-title">Узнаёте себя?</h2>
+            <div class="pains-grid">
+                <!-- Card 1: Не знаю, что делать -->
+                <div class="pain-card">
+                    <h3 class="pain-card-title">Не знаю, что делать</h3>
+                    <ul class="pain-list">
+                        <li class="pain-item">
+                            <img src="assets/icons/activity.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Много действий — результата нет</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/help-circle.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Не знаю, где брать заявки</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/circle-alert.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Делаю, но не уверен, что правильно</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Card 2: Нет нормальных спецов -->
+                <div class="pain-card">
+                    <h3 class="pain-card-title">Нет нормальных спецов</h3>
+                    <ul class="pain-list">
+                        <li class="pain-item">
+                            <img src="assets/icons/user-x.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Работал с маркетологами — без толку</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/wallet.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Подрядчики сливают деньги</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/clock.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Нанимать дорого, делать самому — нет времени</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Card 3: Клиентов то густо, то пусто -->
+                <div class="pain-card">
+                    <h3 class="pain-card-title">Клиентов то густо, то пусто</h3>
+                    <ul class="pain-list">
+                        <li class="pain-item">
+                            <img src="assets/icons/volume-x.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Реклама не работает</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/message-circle.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Сарафан — единственный канал</span>
+                        </li>
+                        <li class="pain-item">
+                            <img src="assets/icons/trending-down.svg" alt="" class="pain-icon" width="20" height="20">
+                            <span>Выручка не растёт</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Showcase -->
+    <section class="showcase-section">
+        <div class="showcase-container">
+            <h2 class="showcase-title">Почему просто<br>запустить <span class="highlight-lime">рекламу</span><br>не работает?</h2>
+            <div class="showcase-grid">
+                <!-- Card 1: только текст (без карточки) -->
+                <div class="showcase-text-block">
+                    <h3 class="showcase-card-heading">Так делают 97 из 100 микробизнесов</h3>
+                    <p class="showcase-card-text">Берут 1–2 инструмента из кучи: таргет, сайт, рассылка. Не сработало — берут следующие. Так можно годами перебирать инструменты и сливать бюджет. Это лоскутный маркетинг — куски, вырванные из контекста. Это как пробовать читать, используя всего 5 букв. Нужно же знать весь алфавит.</p>
+                    <p class="showcase-card-text" style="margin-top: 16px; color: #1a1a2e; font-weight: 600;">Если в часах не хватает одной шестерёнки — часы встают. Выглядят как часы, но время не показывают. Большинство курсов и маркетологов продают вам отдельные буквы и шестерёнки. Россыпь частей механизма — это не механизм.</p>
+                </div>
+                <!-- Card 2: изображение X -->
+                <div class="showcase-card">
+                    <img src="assets/images/x.png" alt="Инструменты без системы" class="showcase-card-image">
+                </div>
+                <!-- Card 3: изображение P -->
+                <div class="showcase-card">
+                    <img src="assets/images/p.png" alt="Система инструментов" class="showcase-card-image">
+                </div>
+                <!-- Card 4: только текст (без карточки) -->
+                <div class="showcase-text-block">
+                    <h3 class="showcase-card-heading">Так делают 3 из 100, которые растут</h3>
+                    <p class="showcase-card-text">Инструменты выстроены в систему. Каждый на своём месте, в нужной последовательности. Собственник включает элементы один за другим — и маркетинг начинает работать как механизм: генерирует выручку предсказуемо, независимо от настроения и сезона.</p>
+                    <p class="showcase-card-text" style="margin-top: 16px; color: #1a1a2e; font-weight: 600;">Результат — стабильный рост выручки до 120 млн ₽ в год.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Features (Block 6 — Структура маркетинга) -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2 class="features-title">Как выглядит маркетинг<br>при <span class="highlight-lime">инженерном</span> подходе</h2>
+            <div class="features-body">
+                <div class="features-left">
+                    <p class="features-desc">Внутри каждого раздела — инструменты, выстроенные в последовательность. Всё связано: инструменты между собой, разделы между собой. Красный сигнал в одном месте — и вся система выходит из строя.</p>
+                    <a href="#pricing" class="btn-primary">
+                        <img src="assets/icons/zap.svg" alt="" class="btn-icon btn-icon-white" width="22" height="22">
+                        <span>Смотреть практикум</span>
+                    </a>
+                </div>
+                <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Стратегический маркетинг</h3>
+                    <p class="feature-card-text">На какой рынок идём, что продаём и кому?</p>
+                    <div class="feature-card-image">
+                        <img src="assets/images/ZMS_ST.jpg" alt="Стратегический маркетинг">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Генерация лидов</h3>
+                    <p class="feature-card-text">Какие рекламные каналы подходят, как выбрать и настроить?</p>
+                    <div class="feature-card-image">
+                        <img src="assets/images/ZMS_R.jpg" alt="Генерация лидов">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Продажи</h3>
+                    <p class="feature-card-text">Как превратить заявки в клиентов с нужной конверсией?</p>
+                    <div class="feature-card-image">
+                        <img src="assets/images/ZMS_P.jpg" alt="Продажи">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-card-title">Сервисный маркетинг</h3>
+                    <p class="feature-card-text">Как увеличить выручку за счёт работы с текущими клиентами?</p>
+                    <div class="feature-card-image">
+                        <img src="assets/images/ZMZ_S.jpg" alt="Сервисный маркетинг">
+                    </div>
+                </div>
+            </div>
+                <div class="features-bottom-mobile">
+                    <p class="features-desc">Внутри каждого раздела — инструменты, выстроенные в последовательность. Всё связано: инструменты между собой, разделы между собой. Красный сигнал в одном месте — и вся система выходит из строя.</p>
+                    <a href="#pricing" class="btn-primary">
+                        <img src="assets/icons/zap.svg" alt="" class="btn-icon btn-icon-white" width="22" height="22">
+                        <span>Смотреть практикум</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Author Quote 2 (Bridge to Practicum) -->
+    <section class="author-quote-section no-padding-top">
+        <div class="author-quote-container">
+            <div class="author-quote-left">
+                <div class="author-avatar">
+                    <img src="assets/images/AD_1.jpg" alt="Алексей Добрусин">
+                </div>
+                <div class="author-info">
+                    <p class="author-name">Алексей Добрусин</p>
+                    <p class="author-role">Автор практикума</p>
+                </div>
+            </div>
+            <div class="author-quote-right">
+                <div class="quote-mark">
+                    <img src="assets/icons/quote-tabler.svg?v=4" alt="" width="115" height="72">
+                </div>
+                <div class="quote-text-content">
+                    <h2 class="author-quote-heading">Система маркетинга на 120 млн ₽ начинается со стратегического маркетинга. Это фундамент. 11 инструментов в правильной последовательности.</h2>
+                    <p class="author-quote-text"><span style="font-weight: 600; color: #1a1a2e;">Пропустишь один — реклама, продажи, масштабирование не заработают.</span> На этом практикуме разберём каждый из 11 инструментов: что это, зачем нужен, в каком порядке внедрять.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Program (Block 8 — Программа практикума) -->
+    <section class="program-section">
+        <div class="program-container">
+            <h2 class="program-title"><span class="highlight-lime">Программа</span> практикума</h2>
+            <div class="program-grid">
+                <!-- Row 1 -->
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/scale.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Справедливая несправедливость</h3>
+                        <p class="program-item-text">Почему один растёт за год вдвое, а у другого в точно таком же бизнесе продажи скачут, а реклама не окупается?</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/message-circle.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Основа роста</h3>
+                        <p class="program-item-text">11 инструментов маркетинга, без которых прибыль компании расти не будет.</p>
+                    </div>
+                </div>
+                <!-- Row 2 -->
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/search.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Место преступления</h3>
+                        <p class="program-item-text">Метод из уголовной практики, который помогает найти, где ломается маркетинг.</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/compass.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Ясный путь</h3>
+                        <p class="program-item-text">Единственный путь твёрдо ответить на вопрос: «Что мне делать, чтобы увеличить выручку?».</p>
+                    </div>
+                </div>
+                <!-- Row 3 -->
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/alert-triangle.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Не применять — убьёт</h3>
+                        <p class="program-item-text">Почему маркетинг крупного бизнеса может погубить микрокомпанию?</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/crosshair.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Денежная точность</h3>
+                        <p class="program-item-text">Как перестать делать всё подряд и начать делать то, что приносит деньги?</p>
+                    </div>
+                </div>
+                <!-- Row 4 -->
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/git-branch.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Мука выбора</h3>
+                        <p class="program-item-text">Как избавиться от сомнений и убедиться, что ваши решения точно повлияют на выручку.</p>
+                    </div>
+                </div>
+                <div class="program-item">
+                    <div class="program-icon">
+                        <img src="assets/icons/shield.svg" alt="" width="24" height="24">
+                    </div>
+                    <div class="program-content">
+                        <h3 class="program-item-title">Запрет на слив</h3>
+                        <p class="program-item-text">Подход к выбору рекламных каналов, который сводит риски потери денег до минимума.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Career (photo + text) -->
+    <section class="career-section">
+        <h2 class="career-heading">Алексей <span class="highlight-lime">Добрусин</span></h2>
+        <div class="career-container">
+            <div class="career-image">
+                <img src="assets/images/ad_z.jpg" alt="">
+                <div class="career-overlay">
+                    <div class="career-dot"></div>
+                    <span class="career-overlay-label">Автор практикума</span>
+                </div>
+            </div>
+            <div class="career-content">
+                <ul class="career-checklist">
+                    <li class="career-checklist-item">
+                        <img src="assets/icons/circle-check-lime.svg" alt="" class="career-check-icon" width="22" height="22">
+                        <span>Маркетолог-стратег, 16 лет практики</span>
+                    </li>
+                    <li class="career-checklist-item">
+                        <img src="assets/icons/circle-check-lime.svg" alt="" class="career-check-icon" width="22" height="22">
+                        <span>Кандидат экономических наук</span>
+                    </li>
+                    <li class="career-checklist-item">
+                        <img src="assets/icons/circle-check-lime.svg" alt="" class="career-check-icon" width="22" height="22">
+                        <span>Экс-директор по маркетингу в компаниях из ТОП-10 РФ</span>
+                    </li>
+                    <li class="career-checklist-item">
+                        <img src="assets/icons/circle-check-lime.svg" alt="" class="career-check-icon" width="22" height="22">
+                        <span>Автор инженерного подхода к маркетингу (метод ЗМС)</span>
+                    </li>
+                    <li class="career-checklist-item">
+                        <img src="assets/icons/circle-check-lime.svg" alt="" class="career-check-icon" width="22" height="22">
+                        <span>Трекер Сколково, эксперт Forbes</span>
+                    </li>
+                </ul>
+                <p class="career-text">Если нет роста, вы не понимаете, что делать, и вы просто заколебались настолько, что порой хочется всё бросить — надо вернуться к фундаменту — к стратегическому маркетингу. На практикуме этим и займёмся!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Final CTA -->
+    <section class="final-section" id="pricing">
+        <h2 class="final-heading">Что вы <span class="highlight-lime">получите</span></h2>
+        <div class="final-container">
+            <div class="final-card final-card-light">
+                <div class="final-gift-icon">
+                    <img src="assets/icons/gift.svg" alt="" width="50" height="50">
+                </div>
+                <div class="final-bonus-list">
+                    <div class="final-bonus-item">
+                        <span class="final-bonus-dot"></span>
+                        <p class="final-bonus-text">Запись практикума (2 часа)</p>
+                    </div>
+                    <div class="final-bonus-item">
+                        <span class="final-bonus-dot"></span>
+                        <p class="final-bonus-text">Презентация</p>
+                    </div>
+                    <div class="final-bonus-item">
+                        <span class="final-bonus-dot"></span>
+                        <p class="final-bonus-text">Конспект</p>
+                    </div>
+                    <div class="final-bonus-item">
+                        <span class="final-bonus-dot"></span>
+                        <p class="final-bonus-text">Доступ навсегда</p>
+                    </div>
+                </div>
+                <p class="final-bonus-note">После оплаты ссылка с записью и материалами придёт в Telegram.</p>
+            </div>
+            <div class="final-phone">
+                <div class="final-phone-frame">
+                    <img src="assets/images/16 Pro Max - Natural Titanium.png" alt="" class="final-phone-device">
+                    <img src="assets/images/P_1.jpg" alt="" class="final-phone-screen">
+                </div>
+            </div>
+            <div class="final-card final-card-dark">
+                <h2 class="final-dark-price">100₽</h2>
+                <p class="final-dark-old-price"><s>1 000₽</s></p>
+                <h3 class="final-card-heading">Живые практикумы я провожу за 1&nbsp;000–3&nbsp;000&nbsp;₽. Запись этого практикума, где разложен фундамент маркетинга, вы получаете всего за 100&nbsp;₽. <span class="text-muted">2 часа, которые сэкономят месяцы проб и ошибок.</span></h3>
+                <a href="https://payform.ru/o2aHCQy/" class="btn-primary final-cta" target="_blank" rel="noopener">
+                    <img src="assets/icons/zap.svg" alt="" class="btn-icon btn-icon-white" width="22" height="22">
+                    <span>Получить практикум</span>
+                </a>
+                <div class="final-phone-inline">
+                    <div class="final-phone-frame">
+                        <img src="assets/images/16 Pro Max - Natural Titanium.png" alt="" class="final-phone-device">
+                        <img src="assets/images/P_1.jpg" alt="" class="final-phone-screen">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Reviews (Блок 11) -->
+    <section class="reviews-section">
+        <div class="reviews-container">
+            <div class="reviews-grid">
+                <!-- Row 1: light, dark, light -->
+                <div class="review-card review-card-light">
+                    <img src="assets/images/otz_1.png" alt="Отзыв" class="review-image">
+                </div>
+                <div class="review-card review-card-dark">
+                    <img src="assets/images/otz_4.png" alt="Отзыв" class="review-image">
+                </div>
+                <div class="review-card review-card-light">
+                    <img src="assets/images/otz_2.png" alt="Отзыв" class="review-image">
+                </div>
+                <!-- Row 2: dark, light, dark -->
+                <div class="review-card review-card-dark">
+                    <img src="assets/images/otz_5.png" alt="Отзыв" class="review-image">
+                </div>
+                <div class="review-card review-card-light">
+                    <img src="assets/images/otz_3.png" alt="Отзыв" class="review-image">
+                </div>
+                <div class="review-card review-card-dark">
+                    <img src="assets/images/otz_6.png" alt="Отзыв" class="review-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Showcase 2 (дубль секции 5) — СКРЫТА, сохранена на будущее -->
+    <section class="showcase-section showcase-section-2" style="display: none;">
+        <div class="showcase-container">
+            <h2 class="showcase-title">В чем приемущество<br><span class="highlight-lime">инженерного</span> подхода?</h2>
+            <div class="showcase-grid">
+                <!-- Card 1: только текст (без карточки) -->
+                <div class="showcase-text-block">
+                    <h3 class="showcase-card-heading">Инструменты без системы не работают</h3>
+                    <p class="showcase-card-text">Представьте механические часы. Если внутри не хватает одной шестерёнки — часы встают. Выглядят как часы, но время не показывают. Большинство курсов и маркетологов продают вам отдельные шестерёнки: рилсы, автоворонки, скрипты. Но россыпь запчастей — это ещё не механизм.</p>
+                </div>
+                <!-- Card 2: визуальная карточка -->
+                <div class="showcase-card">
+                    <div class="showcase-card-visual showcase-visual-2">
+                        <div class="sc2-card sc2-card-left">
+                            <div class="sc2-label"></div>
+                            <div class="sc2-bars">
+                                <div class="sc2-bar" style="height:40%"></div>
+                                <div class="sc2-bar" style="height:60%"></div>
+                                <div class="sc2-bar" style="height:50%"></div>
+                            </div>
+                            <div class="sc2-card-title"></div>
+                            <div class="sc2-card-sub"></div>
+                        </div>
+                        <div class="sc2-card sc2-card-center">
+                            <div class="sc2-tabs">
+                                <div class="sc2-tab sc2-tab-active"></div>
+                                <div class="sc2-tab"></div>
+                            </div>
+                            <div class="sc2-content">
+                                <div class="sc2-globe"></div>
+                                <div class="sc2-chart-bars">
+                                    <div class="sc2-bar" style="height:30%"></div>
+                                    <div class="sc2-bar" style="height:70%"></div>
+                                    <div class="sc2-bar" style="height:50%"></div>
+                                    <div class="sc2-bar" style="height:90%"></div>
+                                </div>
+                                <div class="sc2-badge">+6</div>
+                            </div>
+                            <div class="sc2-card-title"></div>
+                            <div class="sc2-card-sub"></div>
+                        </div>
+                        <div class="sc2-card sc2-card-right">
+                            <div class="sc2-label"></div>
+                            <div class="sc2-line-chart"></div>
+                            <div class="sc2-card-title"></div>
+                            <div class="sc2-card-sub"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3: визуальная карточка -->
+                <div class="showcase-card">
+                    <div class="showcase-card-visual showcase-visual-3">
+                        <div class="sc3-left">
+                            <div class="sc3-panel sc3-panel-bars">
+                                <div class="sc3-mini-bars">
+                                    <div class="sc3-mbar" style="height:20%"></div>
+                                    <div class="sc3-mbar" style="height:30%"></div>
+                                    <div class="sc3-mbar" style="height:25%"></div>
+                                    <div class="sc3-mbar" style="height:40%"></div>
+                                    <div class="sc3-mbar" style="height:55%"></div>
+                                    <div class="sc3-mbar" style="height:70%"></div>
+                                    <div class="sc3-mbar" style="height:65%"></div>
+                                    <div class="sc3-mbar" style="height:80%"></div>
+                                    <div class="sc3-mbar" style="height:90%"></div>
+                                    <div class="sc3-mbar" style="height:85%"></div>
+                                </div>
+                                <div class="sc3-axis-labels">
+                                    <span>Q1</span><span>Q3</span><span>Q4</span><span>Q1</span><span>Q2</span>
+                                </div>
+                            </div>
+                            <div class="sc3-panel sc3-panel-line">
+                                <div class="sc3-line-area"></div>
+                                <div class="sc3-axis-labels">
+                                    <span>May</span><span>June</span><span>July</span><span>August</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sc3-right">
+                            <div class="sc3-add-panel">
+                                <div class="sc3-add-label">Add chart</div>
+                                <div class="sc3-add-icon">+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4: только текст (без карточки) -->
+                <div class="showcase-text-block">
+                    <h3 class="showcase-card-heading">Инженерный подход — это сборка механизма</h3>
+                    <p class="showcase-card-text">Мы выстраиваем инструменты в правильной последовательности, чтобы они работали вместе. Не набор запчастей, а механизм, который генерирует выручку — предсказуемо, независимо от вашего настроения и сезона.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <a href="#" class="logo footer-logo">
+                <img src="assets/icons/crosshair.svg" alt="" class="footer-icon" width="22" height="22">
+                <span class="footer-logo-text">MetodZMS</span>
+            </a>
+            <div class="footer-links">
+                <a href="/privacy" class="footer-link" target="_blank">Политика конфиденциальности</a>
+                <span class="footer-divider">·</span>
+                <a href="/offer" class="footer-link" target="_blank">Оферта</a>
+            </div>
+            <p class="footer-copyright">© 2025 Алексей Добрусин</p>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-overlay"></div>
+        <div class="video-modal-container">
+            <button class="video-modal-close" id="videoModalClose">
+                <img src="assets/icons/x.svg" alt="Закрыть" width="24" height="24">
+            </button>
+            <div class="video-modal-player">
+                <img src="assets/images/ad_z.jpg" alt="Превью видео" class="video-placeholder" id="videoPreview">
+                <div class="video-play-button" id="videoPlayBtn">
+                    <img src="assets/icons/youtube-logo-fill.svg" alt="Воспроизвести">
+                </div>
+                <div class="video-loading-spinner" id="videoSpinner"></div>
+                <iframe id="kinescope-player" src="" allow="autoplay; fullscreen; picture-in-picture; encrypted-media; gyroscope; accelerometer; clipboard-write; screen-wake-lock;" frameborder="0" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
